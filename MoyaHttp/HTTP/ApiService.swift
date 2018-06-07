@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import Moya
 
-public var HttpProvider: MoyaProvider<ApiService> = MoyaProvider<ApiService>()
+public let HttpProvider: MoyaProvider<ApiService> = MoyaProvider<ApiService>()
 
 public enum ApiService {
     
@@ -24,7 +24,6 @@ public enum ApiService {
         var fileKey: String
         var mimeType: String
     }
-    
 }
 
 extension ApiService: TargetType {
