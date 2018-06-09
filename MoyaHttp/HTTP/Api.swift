@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct API {
+struct Api {
     static let kBaseUrl = "https://tips.kangzubin.com"
     static let kListPath = "api/feed/list"
 }

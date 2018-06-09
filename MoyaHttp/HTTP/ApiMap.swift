@@ -38,7 +38,19 @@ public extension PrimitiveSequence where TraitType == SingleTrait, ElementType =
 }
 
 public extension PrimitiveSequence where TraitType == SingleTrait, ElementType: ModelVerifiable {
-    func validate() -> Single<ElementType.Model?> {
+    func validate() -> Single<ElementType.DataModel?> {
         return flatMap({ Single.just( try $0.validate() ) })
     }
+}
+
+public extension MoyaProvider where Target == ApiRequest {
+    
+    func mapRequest<T:Codable>(_ req: ApiRequest, type: T.Type) -> Single<T> {
+        return HttpProvider.rx.request(req).map(T.self)
+    }
+    
+    func validateMapRequest<T:ModelVerifiable>(_ req: ApiRequest, type: T.Type) -> Single<T.DataModel?> {
+        return HttpProvider.rx.request(req).map(T.self).validate()
+    }
+    
 }

@@ -10,9 +10,9 @@ import UIKit
 import Foundation
 import Moya
 
-public let HttpProvider: MoyaProvider<ApiService> = MoyaProvider<ApiService>()
+public let HttpProvider: MoyaProvider<ApiRequest> = MoyaProvider<ApiRequest>()
 
-public enum ApiService {
+public enum ApiRequest {
     
     case request(baseUrl:String, path: String?, params: [String:Any]?, method: Moya.Method)
     case upload(baseUrl:String, path: String?, params: [String:Any]?, files:[FileModel], method: Moya.Method)
@@ -24,9 +24,21 @@ public enum ApiService {
         var fileKey: String
         var mimeType: String
     }
+    
+    static func get(baseUrl:String, path: String? = nil, params: [String:Any]? = nil) -> ApiRequest {
+        return ApiRequest.request(baseUrl: baseUrl, path: path, params: params, method: .get)
+    }
+    
+    static func post(baseUrl:String, path: String? = nil, params: [String:Any]? = nil) -> ApiRequest {
+        return ApiRequest.request(baseUrl: baseUrl, path: path, params: params, method: .post)
+    }
+    
+    static func postUpload(baseUrl:String, path: String?, params: [String:Any]? = nil, files:[FileModel]) -> ApiRequest {
+        return ApiRequest.upload(baseUrl: baseUrl, path: path, params: params, files: files, method: .post)
+    }
 }
 
-extension ApiService: TargetType {
+extension ApiRequest: TargetType {
     
     public var headers: [String : String]? {
         return nil
@@ -113,7 +125,6 @@ extension ApiService: TargetType {
     public var sampleData: Data {
         return "".data(using: String.Encoding.utf8)!
     }
-    
 }
 
 private let defaultDownloadDestination: DownloadDestination = { temporaryURL, response in

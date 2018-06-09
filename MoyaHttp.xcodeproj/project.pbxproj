@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0253A0EE20CB9EBA00465CF3 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0253A0ED20CB9EBA00465CF3 /* ApiRequest.swift */; };
 		026CC3B620C91ED900B8D655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CC3B520C91ED900B8D655 /* AppDelegate.swift */; };
 		026CC3B820C91ED900B8D655 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CC3B720C91ED900B8D655 /* ViewController.swift */; };
 		026CC3BB20C91ED900B8D655 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026CC3B920C91ED900B8D655 /* Main.storyboard */; };
 		026CC3BD20C91ED900B8D655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026CC3BC20C91ED900B8D655 /* Assets.xcassets */; };
 		026CC3C020C91ED900B8D655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026CC3BE20C91ED900B8D655 /* LaunchScreen.storyboard */; };
-		026CC3CC20C91F0200B8D655 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CC3C820C91F0200B8D655 /* ApiService.swift */; };
 		026CC3CD20C91F0200B8D655 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CC3C920C91F0200B8D655 /* Models.swift */; };
-		026CC3CE20C91F0200B8D655 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CC3CA20C91F0200B8D655 /* API.swift */; };
+		026CC3CE20C91F0200B8D655 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CC3CA20C91F0200B8D655 /* Api.swift */; };
 		026CC3CF20C91F0200B8D655 /* ApiMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CC3CB20C91F0200B8D655 /* ApiMap.swift */; };
 		E93DA8875C38AE9FF3D9C354 /* Pods_MoyaHttp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F019102BF67AD93A8A3EB37E /* Pods_MoyaHttp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0253A0ED20CB9EBA00465CF3 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiRequest.swift; path = "../../../Downloads/MoyaHttp-master/MoyaHttp/HTTP/ApiRequest.swift"; sourceTree = "<group>"; };
 		026CC3B220C91ED900B8D655 /* MoyaHttp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoyaHttp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		026CC3B520C91ED900B8D655 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		026CC3B720C91ED900B8D655 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,9 +28,8 @@
 		026CC3BC20C91ED900B8D655 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		026CC3BF20C91ED900B8D655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		026CC3C120C91ED900B8D655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		026CC3C820C91F0200B8D655 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		026CC3C920C91F0200B8D655 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		026CC3CA20C91F0200B8D655 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		026CC3CA20C91F0200B8D655 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		026CC3CB20C91F0200B8D655 /* ApiMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiMap.swift; sourceTree = "<group>"; };
 		767C8F150F6FC77DBAE48161 /* Pods-MoyaHttp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaHttp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoyaHttp/Pods-MoyaHttp.debug.xcconfig"; sourceTree = "<group>"; };
 		F019102BF67AD93A8A3EB37E /* Pods_MoyaHttp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyaHttp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,9 +83,9 @@
 		026CC3C720C91F0200B8D655 /* HTTP */ = {
 			isa = PBXGroup;
 			children = (
-				026CC3C820C91F0200B8D655 /* ApiService.swift */,
+				0253A0ED20CB9EBA00465CF3 /* ApiRequest.swift */,
 				026CC3C920C91F0200B8D655 /* Models.swift */,
-				026CC3CA20C91F0200B8D655 /* API.swift */,
+				026CC3CA20C91F0200B8D655 /* Api.swift */,
 				026CC3CB20C91F0200B8D655 /* ApiMap.swift */,
 			);
 			path = HTTP;
@@ -244,10 +244,10 @@
 			files = (
 				026CC3B820C91ED900B8D655 /* ViewController.swift in Sources */,
 				026CC3B620C91ED900B8D655 /* AppDelegate.swift in Sources */,
-				026CC3CC20C91F0200B8D655 /* ApiService.swift in Sources */,
+				0253A0EE20CB9EBA00465CF3 /* ApiRequest.swift in Sources */,
 				026CC3CF20C91F0200B8D655 /* ApiMap.swift in Sources */,
 				026CC3CD20C91F0200B8D655 /* Models.swift in Sources */,
-				026CC3CE20C91F0200B8D655 /* API.swift in Sources */,
+				026CC3CE20C91F0200B8D655 /* Api.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +395,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S2PRN5RUXV;
 				INFOPLIST_FILE = MoyaHttp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xolo.MoyaHttp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -411,7 +414,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S2PRN5RUXV;
 				INFOPLIST_FILE = MoyaHttp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xolo.MoyaHttp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

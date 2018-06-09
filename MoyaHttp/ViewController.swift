@@ -9,19 +9,34 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let service = ApiService.request(baseUrl: API.kBaseUrl, path: API.kListPath, params: nil, method: .post)
-
-        _ = HttpProvider.rx.request(service).map(RootModel<DetailModel>.self).validate().subscribe(onSuccess: { (model) in
-
+        let api = ApiRequest.post(baseUrl: Api.kBaseUrl, path: Api.kListPath)
+        //        let api = ApiRequest.post(baseUrl: Api.kBaseUrl, path: Api.kListPath, params: nil)
+        //        let api = ApiRequest.get(baseUrl: Api.kBaseUrl)
+        //        let api = ApiRequest.get(baseUrl: Api.kBaseUrl, path: Api.kListPath, params: nil)
+        
+        //        _ = HttpProvider.mapRequest(api, type: RootModel<DetailModel>.self).subscribe(onSuccess: { (model) in
+        //            print(model)
+        //        }, onError: { (error) in
+        //            print(error)
+        //        })
+        
+        _ = HttpProvider.validateMapRequest(api, type: RootModel<DetailModel>.self).subscribe(onSuccess: { (model) in
             print(model ?? "")
-
         }, onError: { (error) in
-            print(error.localizedDescription)
+            print(error)
         })
+        
+        //        _ = HttpProvider.rx.request(service).map(RootModel<DetailModel>.self).validate().subscribe(onSuccess: { (model) in
+        //
+        //            print(model ?? "")
+        //
+        //        }, onError: { (error) in
+        //            print(error.localizedDescription)
+        //        })
         
     }
 }

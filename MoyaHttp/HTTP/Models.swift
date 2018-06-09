@@ -8,20 +8,20 @@
 
 import Foundation
 
-public protocol ModelVerifiable {
+public protocol ModelVerifiable: Codable {
     
-    associatedtype Model
+    associatedtype DataModel
     
     var code: Int? { get }
     var msg: String? { get }
-    var data: Model? { get }
+    var data: DataModel? { get }
     
-    func validate() throws -> Model?
+    func validate() throws -> DataModel?
 }
 
 public extension ModelVerifiable {
     
-    func validate() throws -> Model? {
+    func validate() throws -> DataModel? {
         
         if let code = code,code == 0 {
             return data
@@ -34,11 +34,11 @@ public extension ModelVerifiable {
     }
 }
 
-public struct RootModel<Target: Codable>: Codable,ModelVerifiable {
-    public typealias Model = Target
+public struct RootModel<Target: Codable>:ModelVerifiable {
+    public typealias DataModel = Target
     public var code: Int?
     public var msg: String?
-    public var data: Target?
+    public var data: DataModel?
 }
 
 struct DetailModel: Codable {
